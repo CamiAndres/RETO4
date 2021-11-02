@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Front Final</title>
+<meta charset="utf-8">
+<meta name="description" content="Este es un documento HTML5">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="misestilos.css">
+<script type="text/javascript" src="js/misFuncionesMessages.js"></script>  
+</head>
+
+<body>
+    <header id="cabeceralogo">
+    <div>
+    <h1>Messages </h1>
+    </div>
+    </header>
+    <nav id="menuprincipal">
+    <div>
+    <ul>
+    <li><a href="index.html">Primary</a></li>
+    <li><a href="Reports.html">Reports</a></li>
+    <li><a href="Category.html">Categories</a></li>
+    <li><a href="Client.html">Clients</a></li>
+    <li><a href="Message.html">Messages</a></li>
+    <li><a href="Reservations.html">Reservations</a></li>
+    <li><a href="Audience.html">Audiences</a></li>
+    </ul>
+    </div>
+    </nav>
+
+    <div id="resultadoMensajes"></div>
+    <script type="text/javascript"> 
+    window.onload = autoInicioMensajes();
+    </script>
+    <input type="text" id="messagetext" placeholder="mensaje">
+    <button onclick="guardarInformacionMensajes()">Guardar Mensajes</button>
+    <select id="select-client"></select>
+    <script type="text/javascript">
+        window.onload = autoInicioRelacionCliente();
+    </script>
+        <select id="select-audience"></select>
+        <script type="text/javascript">
+            window.onload = autoInicioAudience();
+        </script>
+</body>
+</html>
