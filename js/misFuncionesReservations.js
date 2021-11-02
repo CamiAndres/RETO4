@@ -1,8 +1,8 @@
 function autoInicioRelacionCliente(){
     
     $.ajax({
-        //url:"http://168.138.247.22:80/api/Client/all",
-         url:"http://localhost:8080/api/Client/all",
+        url:"http://168.138.127.125:8080/api/Client/all",
+         //url:"http://localhost:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -19,8 +19,8 @@ function autoInicioRelacionCliente(){
 function autoInicioSkate(){
 
     $.ajax({
-       // url:"http://168.138.247.22:8080/api/Audience/all",
-        url:"http://localhost:8080/api/Audience/all",
+        url:"http://168.138.127.125:8080/api/Audience/all",
+        //url:"http://localhost:8080/api/Audience/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -55,8 +55,8 @@ function agregarReservation() {
         $.ajax({
             type: "POST",
             contentType: "application/json",
-           // url:"http://168.138.247.22:80/api/Reservation/save",
-            url: "http://localhost:8080/api/Reservation/save",
+            url:"http://168.138.127.125:8080/api/Reservation/save",
+            //url: "http://localhost:8080/api/Reservation/save",
             data: dataToSend,
             datatype: "json",
 
@@ -83,8 +83,8 @@ function agregarReservation() {
 
 function listarReservation(){
     $.ajax({
-        //url:"http://168.138.247.22:80/api/Reservation/all",
-        url: "http://localhost:8080/api/Reservation/all",
+        url:"http://168.138.127.125:8080/api/Reservation/all",
+        //url: "http://localhost:8080/api/Reservation/all",
         type: "GET",
         datatype: "JSON",
         success: function (response) {
@@ -134,8 +134,8 @@ function borrarReservation(idElemento) {
         {
             dataType: 'json',
             data: dataToSend,
-            //url:"http://168.138.127.125:80/api/Reservation/"+idElemento,
-            url: "http://localhost:8080/api/Reservation/" + idElemento,
+            url:"http://168.138.127.125:8080/api/Reservation/"+idElemento,
+            //url: "http://localhost:8080/api/Reservation/" + idElemento,
             type: 'DELETE',
             contentType: "application/JSON",
             success: function (response) {
@@ -155,8 +155,8 @@ function borrarReservation(idElemento) {
 function cargarDatosReservation(id) {
     $.ajax({
         dataType: 'json',
-        //url:"http://168.138.127.125:80/api/Reservation/"+id,
-        url: "http://localhost:8080/api/Reservation/" + id,
+        url:"http://168.138.127.125:8080/api/Reservation/"+id,
+        //url: "http://localhost:8080/api/Reservation/" + id,
         type: 'GET',
 
         success: function (response) {
@@ -196,8 +196,8 @@ function actualizarReservation(idElemento) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",
-            //url:"http://168.138.127.125:80/api/Reservation/update",
-            url: "http://localhost:8080/api/Reservation/update",
+            url:"http://168.138.127.125:8080/api/Reservation/update",
+            //url: "http://localhost:8080/api/Reservation/update",
             type: "PUT",
 
             success: function (response) {
